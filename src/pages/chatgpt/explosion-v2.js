@@ -10,12 +10,21 @@ const Explosion = () => {
     const ctx = canvas.getContext("2d");
     ctx.width = window.innerWidth;
     ctx.height = window.innerHeight;
-    let particles = [];
+    const particles = [];
 
     const handleExplosion = (x, y) => {
-      const size = Math.floor(Math.random() * 100) + 50;
-      const numParticles = Math.floor(Math.random() * 50) + 50;
-      const gravity = 0.3; // Adjust as needed
+      const size = Math.floor(Math.random() * 50) + 50;
+      const numParticles = Math.floor(Math.random() * 30) + 70;
+      const gravity = 0.1; // Adjust as needed
+
+      const colors = [
+        "#FF4136",
+        "#FF851B",
+        "#FFDC00",
+        "#2ECC40",
+        "#0074D9",
+        "#B10DC9",
+      ];
 
       for (let i = 0; i < numParticles; i++) {
         const particle = {
@@ -23,17 +32,18 @@ const Explosion = () => {
           y: y,
           size: Math.random() * size,
           speedX: Math.random() * 10 - 5,
-          speedY: Math.random() * -10, // Initial negative velocity
-          accelY: gravity, // Acceleration due to gravity
-          color: `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
-            Math.random() * 255
-          )}, ${Math.floor(Math.random() * 255)})`,
+          speedY: Math.random() * -10 - 5, // Add randomness to initial velocity
+          accelY: gravity + Math.random() * 0.3, // Add randomness to acceleration
+          color: colors[Math.floor(Math.random() * colors.length)],
+          decay: Math.random() * 0.05 + 0.03, // Add randomness to size decay
         };
         particles.push(particle);
       }
     };
 
     const animate = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle, index) => {
@@ -43,7 +53,7 @@ const Explosion = () => {
           particle.speedY += particle.accelY; // Apply acceleration
           particle.x += particle.speedX;
           particle.y += particle.speedY;
-          particle.size -= 0.5;
+          particle.size -= particle.decay; // Apply size decay
 
           if (particle.size > 0) {
             ctx.beginPath();

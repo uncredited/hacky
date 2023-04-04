@@ -72,13 +72,13 @@ const GyroBall = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <canvas ref={canvasRef} />
       {errorMessage && <p>{errorMessage}</p>}
       {!gyroEnabled && (
         <button style={{ margin: "20px" }} onClick={requestPermission}>
           Enable Gyroscope
         </button>
       )}
+      <canvas ref={canvasRef} onClick={requestPermission} />
     </div>
   );
 };
