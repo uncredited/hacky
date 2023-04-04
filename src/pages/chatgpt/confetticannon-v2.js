@@ -14,12 +14,12 @@ const ConfettiCannon = () => {
     const colors = ["#f44336", "#2196f3", "#ffeb3b", "#4caf50", "#9c27b0"];
     const maxVelocity = 40;
     const minVelocity = 20;
-    const gravity = 0.07;
+    const gravity = 0.08;
     const maxAngle = 90;
     const minAngle = 75;
     const minSize = 5;
     const maxSize = 10;
-    const particlesPerShot = 30;
+    const particlesPerShot = 200;
     const maxDistance = Math.sqrt(width * width + height * height);
 
     for (let i = 0; i < particlesPerShot; i++) {

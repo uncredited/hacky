@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Style from "../styles/style.module.css";
 
+import Explosion from "./chatgpt/explosion";
 import ConfettiCannonGPTv1 from "./chatgpt/confetticannon-v1";
 import ConfettiCannonGPTv2 from "./chatgpt/confetticannon-v2";
 import PulsatingCircleGPT from "./chatgpt/pulsatingcircle";
@@ -14,6 +15,7 @@ export default function Home() {
   // This page has a button, "Next", that renders the next component in a predefined array-list.
 
   const componentArray = [
+    { title: "Explosion", component: Explosion },
     { title: "GyroBallGPTv1", component: GyroBallv1 },
     { title: "GyroBallGPTv2", component: GyroBallv2 },
     { title: "ConfettiCannonGPTv1", component: ConfettiCannonGPTv1 },

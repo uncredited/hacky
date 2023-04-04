@@ -1,6 +1,6 @@
 .title {
   color          : #ffffff;
-  font-size      : 3rem;
+  font-size      : 2em;
   font-weight    : bold;
   margin         : 0;
   padding        : 0;
@@ -32,5 +32,5 @@
 .topContainer {
   position: fixed;
   width   : 100%;
-  bottom  : 0px;
+  bottom  : 10%;
 }
