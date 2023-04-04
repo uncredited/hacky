@@ -1,0 +1,36 @@
+.title {
+  color          : #ffffff;
+  font-size      : 3rem;
+  font-weight    : bold;
+  margin         : 0;
+  padding        : 0;
+  display        : flex;
+  justify-content: center;
+}
+
+/* Big, 3d, centered button with rounded corners */
+.next {
+  background-color: transparent;
+  border          : 1px solid #ffffff;
+  color           : #ffffff;
+  padding         : 1rem 2rem;
+  text-align      : center;
+  text-decoration : none;
+  text-transform  : uppercase;
+  display         : inline-block;
+  font-size       : 1rem;
+  font-weight     : bold;
+  margin          : 4rem 2rem;
+  cursor          : pointer;
+  border-radius   : 1rem;
+  box-shadow      : 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  margin          : 20px auto;
+  width           : 200px;
+  display         : block;
+}
+
+.topContainer {
+  position: fixed;
+  width   : 100%;
+  bottom  : 0px;
+}
