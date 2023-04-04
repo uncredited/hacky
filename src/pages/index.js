@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import Style from "../styles/style.module.css";
 
-import Explosion from "./chatgpt/explosion";
+import Explosionv1 from "./chatgpt/explosion-v1";
+import Explosionv2 from "./chatgpt/explosion-v2";
 import ConfettiCannonGPTv1 from "./chatgpt/confetticannon-v1";
 import ConfettiCannonGPTv2 from "./chatgpt/confetticannon-v2";
 import PulsatingCircleGPT from "./chatgpt/pulsatingcircle";
@@ -15,11 +16,12 @@ export default function Home() {
   // This page has a button, "Next", that renders the next component in a predefined array-list.
 
   const componentArray = [
-    { title: "Explosion", component: Explosion },
-    { title: "GyroBallGPTv1", component: GyroBallv1 },
-    { title: "GyroBallGPTv2", component: GyroBallv2 },
-    { title: "ConfettiCannonGPTv1", component: ConfettiCannonGPTv1 },
-    { title: "ConfettiCannonGPTv2", component: ConfettiCannonGPTv2 },
+    { title: "Explosion-v1", component: Explosionv1 },
+    { title: "Explosion-v2", component: Explosionv2 },
+    { title: "GyroBallGPT-v1", component: GyroBallv1 },
+    { title: "GyroBallGPT-v2", component: GyroBallv2 },
+    { title: "ConfettiCannonGPT-v1", component: ConfettiCannonGPTv1 },
+    { title: "ConfettiCannonGPT-v2", component: ConfettiCannonGPTv2 },
     { title: "PulsatingCircleCopilot", component: PulsatingCircleCopilot },
     { title: "PulsatingCircleGPT", component: PulsatingCircleGPT },
   ];
