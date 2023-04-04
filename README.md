@@ -1,38 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## React Component Switcher
 
-## Getting Started
+This is a simple React component that allows you to switch between several different components with the click of a button. Each component has its own unique visual effect, and the order in which they are displayed is pre-defined.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+To use this code, you need to have React installed. You can then copy the code and use it in your project.
+
+## Usage
+
+To use this component, you need to import it into your project:
+
+```javascript
+Copy code
+import Home from "./path/to/Home";
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can then use the component in your JSX code:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```jsx
+Copy code
+<Home />
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This will render the component, which will display a button labeled "Next" and a visual effect. Clicking the "Next" button will switch to the next component in the pre-defined order.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+If you want to add your own components to the list, you can do so by modifying the componentArray array:
 
-## Learn More
+```javascript
+Copy code
+const componentArray = [
+  { title: "GyroBallGPTv1", component: GyroBallv1 },
+  { title: "GyroBallGPTv2", component: GyroBallv2 },
+  { title: "ConfettiCannonGPTv1", component: ConfettiCannonGPTv1 },
+  { title: "ConfettiCannonGPTv2", component: ConfettiCannonGPTv2 },
+  { title: "PulsatingCircleCopilot", component: PulsatingCircleCopilot },
+  { title: "PulsatingCircleGPT", component: PulsatingCircleGPT },
+];
+```
 
-To learn more about Next.js, take a look at the following resources:
+Each object in the array represents a component, and consists of a title and a component. The title is a string that will be displayed above the component, and the component is the React component that will be rendered when this item is selected.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You can also customize the CSS styles for the component by modifying the Style object, which is imported from ../styles/style.module.css.
