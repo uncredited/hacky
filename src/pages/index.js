@@ -11,11 +11,15 @@ import GyroBallv1 from "./chatgpt/gyroball-v1";
 import GyroBallv2 from "./chatgpt/gyroball-v2";
 import Fibonachiv1 from "./chatgpt/fibonachi-v1";
 import Fibonachiv2 from "./chatgpt/fibonachi-v2";
+import AnimatedNumberv1 from "./chatgpt/animatednumber-v1";
+import AnimatedNumberv2 from "./chatgpt/animatednumber-v2";
 
 import PulsatingCircleCopilot from "./copilot/pulsatingcircle";
 
 export default function Home() {
   const componentArray = [
+    { title: "AnimatedNumberGPT-v1", component: AnimatedNumberv1 },
+    { title: "AnimatedNumberGPT-v2", component: AnimatedNumberv2 },
     { title: "PulsatingCircleCopilot", component: PulsatingCircleCopilot },
     { title: "PulsatingCircleGPT", component: PulsatingCircleGPT },
     { title: "GyroBallGPT-v1", component: GyroBallv1 },
