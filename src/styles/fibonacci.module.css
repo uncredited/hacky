@@ -1,0 +1,15 @@
+.flexCenter {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  height         : 100vh;
+  font-size      : 40px;
+  flex-wrap      : wrap;
+
+
+}
+
+.text {
+  width    : 80vw;
+  word-wrap: break-word;
+}
