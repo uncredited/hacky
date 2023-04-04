@@ -18,8 +18,6 @@ import PulsatingCircleCopilot from "./copilot/pulsatingcircle";
 
 export default function Home() {
   const componentArray = [
-    { title: "AnimatedNumberGPT-v1", component: AnimatedNumberv1 },
-    { title: "AnimatedNumberGPT-v2", component: AnimatedNumberv2 },
     { title: "PulsatingCircleCopilot", component: PulsatingCircleCopilot },
     { title: "PulsatingCircleGPT", component: PulsatingCircleGPT },
     { title: "GyroBallGPT-v1", component: GyroBallv1 },
@@ -28,6 +26,8 @@ export default function Home() {
     { title: "ConfettiCannonGPT-v2", component: ConfettiCannonGPTv2 },
     { title: "Fibonachi-v1", component: Fibonachiv1 },
     { title: "Fibonachi-v2", component: Fibonachiv2 },
+    { title: "AnimatedNumberGPT-v1", component: AnimatedNumberv1 },
+    { title: "AnimatedNumberGPT-v2", component: AnimatedNumberv2 },
     { title: "Explosion-v1", component: Explosionv1 },
     { title: "Explosion-v2", component: Explosionv2 },
   ];
