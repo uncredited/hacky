@@ -9,21 +9,23 @@ import ConfettiCannonGPTv2 from "./chatgpt/confetticannon-v2";
 import PulsatingCircleGPT from "./chatgpt/pulsatingcircle";
 import GyroBallv1 from "./chatgpt/gyroball-v1";
 import GyroBallv2 from "./chatgpt/gyroball-v2";
+import Fibonachiv1 from "./chatgpt/fibonachi-v1";
+import Fibonachiv2 from "./chatgpt/fibonachi-v2";
 
 import PulsatingCircleCopilot from "./copilot/pulsatingcircle";
 
 export default function Home() {
-  // This page has a button, "Next", that renders the next component in a predefined array-list.
-
   const componentArray = [
-    { title: "Explosion-v1", component: Explosionv1 },
-    { title: "Explosion-v2", component: Explosionv2 },
+    { title: "PulsatingCircleCopilot", component: PulsatingCircleCopilot },
+    { title: "PulsatingCircleGPT", component: PulsatingCircleGPT },
     { title: "GyroBallGPT-v1", component: GyroBallv1 },
     { title: "GyroBallGPT-v2", component: GyroBallv2 },
     { title: "ConfettiCannonGPT-v1", component: ConfettiCannonGPTv1 },
     { title: "ConfettiCannonGPT-v2", component: ConfettiCannonGPTv2 },
-    { title: "PulsatingCircleCopilot", component: PulsatingCircleCopilot },
-    { title: "PulsatingCircleGPT", component: PulsatingCircleGPT },
+    { title: "Fibonachi-v1", component: Fibonachiv1 },
+    { title: "Fibonachi-v2", component: Fibonachiv2 },
+    { title: "Explosion-v1", component: Explosionv1 },
+    { title: "Explosion-v2", component: Explosionv2 },
   ];
   const [componentIndex, setComponentIndex] = useState(0);
   const { title, component: CurrentComponent } =
